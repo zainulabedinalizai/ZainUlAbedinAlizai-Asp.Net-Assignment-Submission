@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Order Entry";
+}
+
+<h2>Enter Order Details</h2>
+
+<form asp-controller="Order" asp-action="ProcessOrder" method="post">
+    <label>Order Amount:</label>
+    <input type="number" name="orderAmount" required step="0.01" min="0">
+
+    <label>Customer Type:</label>
+    <select name="customerType" required>
+        <option value="New">New</option>
+        <option value="Loyal">Loyal</option>
+    </select>
+
+    <button type="submit">Submit</button>
+</form>
